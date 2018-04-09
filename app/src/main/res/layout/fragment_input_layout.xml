@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.example.yasirnazir.curve.home.viewmodel.MainViewModel" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.yasirnazir.curve.home.fragment.FragmentInputLayout">
+
+        <EditText
+            android:id="@+id/inputField1"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="120dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            android:text='@{String.valueOf(model.field1)}'
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/inputField2"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            android:text='@{String.valueOf(model.field2)}'
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <EditText
+            android:id="@+id/inputField3"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="120dp"
+            android:layout_marginTop="60dp"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            android:text='@{String.valueOf(model.field3)}'
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/inputField4"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="60dp"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            android:text='@{String.valueOf(model.field4)}'
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <EditText
+            android:id="@+id/inputField5"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="120dp"
+            android:layout_marginTop="120dp"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            android:text='@{String.valueOf(model.field5)}'
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <EditText
+            android:id="@+id/inputField6"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="120dp"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            android:text='@{String.valueOf(model.field1)}'
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/sumField"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="230dp"
+            android:gravity="center"
+            android:editable="false"
+            android:inputType="numberDecimal"
+            android:text='@{String.valueOf(model.sum)}'
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/inputField6"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
