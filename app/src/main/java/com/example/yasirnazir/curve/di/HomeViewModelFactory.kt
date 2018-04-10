@@ -4,7 +4,7 @@ import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProvider
 import com.example.yasirnazir.curve.home.viewmodel.MainViewModel
 
-class HomeViewModelFactory() :
+open class HomeViewModelFactory() :
         ViewModelProvider.NewInstanceFactory() {
 
     @Suppress("UNCHECKED_CAST")

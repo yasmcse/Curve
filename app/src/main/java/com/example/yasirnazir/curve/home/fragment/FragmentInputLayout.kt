@@ -12,6 +12,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
+import com.example.yasirnazir.curve.MyApp
 import com.example.yasirnazir.curve.home.viewmodel.MainViewModel
 import com.example.yasirnazir.curve.R
 import com.example.yasirnazir.curve.databinding.FragmentInputLayoutBinding
@@ -23,18 +24,16 @@ import javax.inject.Inject
 class FragmentInputLayout : Fragment() {
 
     @Inject
-    lateinit var homeViewModelFactory: HomeViewModelFactory
+    lateinit var mainViewModelFactory: HomeViewModelFactory
+
     var viewModel: MainViewModel? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         super.onCreate(savedInstanceState)
         var binding = DataBindingUtil.inflate<FragmentInputLayoutBinding>(inflater, R.layout.fragment_input_layout, container, false)
-
-        // Tried to inject ViewModel using dagger but there is an issue, Dagger not generating code in MyApp class. Ran out of time to fix this.
-        //viewModel = ViewModelProviders.of(activity!!,getViewModelFactory()).get(MainViewModel::class.java)
-
-        viewModel = ViewModelProviders.of(activity!!).get(MainViewModel::class.java)
+        (context?.applicationContext as MyApp).getAppComponentThis().inject(this)
+        viewModel = ViewModelProviders.of(activity!!, mainViewModelFactory).get(MainViewModel::class.java)
         binding.model = viewModel
         return binding.root
     }
@@ -97,9 +96,6 @@ class FragmentInputLayout : Fragment() {
 
     }
 
-    override fun onDetach() {
-        super.onDetach()
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -114,8 +110,9 @@ class FragmentInputLayout : Fragment() {
         onSumFieldTapped()
     }
 
-    fun getViewModelFactory(): HomeViewModelFactory {
-        return homeViewModelFactory
+    override fun onDetach() {
+        super.onDetach()
+
     }
 
     companion object {

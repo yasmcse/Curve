@@ -1,25 +1,13 @@
 package com.example.yasirnazir.curve.di
 
-import android.app.Application
 import com.example.yasirnazir.curve.MyApp
-import dagger.BindsInstance
+import com.example.yasirnazir.curve.home.fragment.FragmentInputLayout
 import dagger.Component
 import javax.inject.Singleton
 
 @Singleton
-@Component()
+@Component(modules = arrayOf(AppModule::class,HomeModule::class))
 interface AppComponent {
-
-    @Component.Builder
-    interface Builder {
-        @BindsInstance
-        fun application(application: Application): Builder
-
-        fun build(): AppComponent
-    }
-
-    abstract fun inject(app: MyApp)
-
-
-    fun plus(homeModule:HomeModule):HomeComponent
+    fun inject(app: MyApp)
+    fun inject(fragment: FragmentInputLayout)
 }

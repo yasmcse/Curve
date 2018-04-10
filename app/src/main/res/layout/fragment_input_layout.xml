@@ -23,7 +23,7 @@
             android:fontFamily="sans-serif"
             android:gravity="center"
             android:inputType="numberDecimal"
-            android:text='@{String.valueOf(model.field1)}'
+            android:text='@{String.valueOf(model.input.field1)}'
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -37,7 +37,7 @@
             android:layout_marginLeft="30dp"
             android:gravity="center"
             android:inputType="numberDecimal"
-            android:text='@{String.valueOf(model.field2)}'
+            android:text='@{String.valueOf(model.input.field2)}'
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -53,7 +53,7 @@
             android:layout_marginTop="60dp"
             android:gravity="center"
             android:inputType="numberDecimal"
-            android:text='@{String.valueOf(model.field3)}'
+            android:text='@{String.valueOf(model.input.field3)}'
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -68,7 +68,7 @@
             android:layout_marginTop="60dp"
             android:gravity="center"
             android:inputType="numberDecimal"
-            android:text='@{String.valueOf(model.field4)}'
+            android:text='@{String.valueOf(model.input.field4)}'
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -84,7 +84,7 @@
             android:layout_marginTop="120dp"
             android:gravity="center"
             android:inputType="numberDecimal"
-            android:text='@{String.valueOf(model.field5)}'
+            android:text='@{String.valueOf(model.input.field5)}'
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -100,7 +100,7 @@
             android:layout_marginTop="120dp"
             android:gravity="center"
             android:inputType="numberDecimal"
-            android:text='@{String.valueOf(model.field1)}'
+            android:text='@{String.valueOf(model.input.field6)}'
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -117,7 +117,7 @@
             android:gravity="center"
             android:editable="false"
             android:inputType="numberDecimal"
-            android:text='@{String.valueOf(model.sum)}'
+            android:text='@{String.valueOf(model.input.sum)}'
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/inputField6"

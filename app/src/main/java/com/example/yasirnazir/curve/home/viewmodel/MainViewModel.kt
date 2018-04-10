@@ -2,55 +2,51 @@ package com.example.yasirnazir.curve.home.viewmodel
 
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
- class MainViewModel : ViewModel() {
-    var field1: Double = 0.0
-    var field2: Double = 0.0
-    var field3: Double = 0.0
-    var field4: Double = 0.0
-    var field5: Double = 0.0
-    var field6: Double = 0.0
-    var sum: Double = 0.0
-    val updateSumField: MutableLiveData<Double> = MutableLiveData()
+import com.example.yasirnazir.curve.models.Input
 
+class MainViewModel : ViewModel() {
+
+    val input = Input()
+    val updateSumField: MutableLiveData<Double> = MutableLiveData()
 
     fun updateField(fieldName: String, fieldValue: Double) {
         when (fieldName) {
             inputField1 -> {
 
-                this.field1 = fieldValue
-                sum = field1.plus(field2).plus(field3).plus(field4).plus(field5).plus(field6)
-                updateSumField.postValue(sum)
+                input.field1 = fieldValue
+                computeSum()
 
             }
             inputField2 -> {
-                this.field2 = fieldValue
-                sum = field1.plus(field2).plus(field3).plus(field4).plus(field5).plus(field6)
-                updateSumField.postValue(sum)
+                input.field2 = fieldValue
+                computeSum()
             }
             inputField3 -> {
-                this.field3 = fieldValue
-                sum = field1.plus(field2).plus(field3).plus(field4).plus(field5).plus(field6)
-                updateSumField.postValue(sum)
+                input.field3 = fieldValue
+                computeSum()
             }
             inputField4 -> {
-                this.field4 = fieldValue
-                sum = field1.plus(field2).plus(field3).plus(field4).plus(field5).plus(field6)
-                updateSumField.postValue(sum)
+                input.field4 = fieldValue
+                computeSum()
+
             }
             inputField5 -> {
-                this.field5 = fieldValue
-                sum = field1.plus(field2).plus(field3).plus(field4).plus(field5).plus(field6)
-                updateSumField.postValue(sum)
+                input.field5 = fieldValue
+                computeSum()
             }
             inputField6 -> {
-                this.field6 = fieldValue
-                sum = field1.plus(field2).plus(field3).plus(field4).plus(field5).plus(field6)
-                updateSumField.postValue(sum)
+                input.field5 = fieldValue
+                computeSum()
             }
 
             else -> println("Unknown field name")
         }
 
+    }
+
+    private fun computeSum() {
+        input.sum = input.field1.plus(input.field2).plus(input.field3).plus(input.field4).plus(input.field5).plus(input.field6)
+        updateSumField.postValue(input.sum)
     }
 
 
