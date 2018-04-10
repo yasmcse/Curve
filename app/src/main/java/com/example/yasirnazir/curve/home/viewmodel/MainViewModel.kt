@@ -35,7 +35,7 @@ class MainViewModel : ViewModel() {
                 computeSum()
             }
             inputField6 -> {
-                input.field5 = fieldValue
+                input.field6 = fieldValue
                 computeSum()
             }
 
