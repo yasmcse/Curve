@@ -1,4 +1,4 @@
-# Curve
+# SUM CALCULATOR
 
 The project uses the following technologies:
 
